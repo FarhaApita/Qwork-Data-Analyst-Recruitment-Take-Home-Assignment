@@ -210,7 +210,7 @@ FROM BASE_SALARY_TYPE
 group by type, currency
 
 
--- Range Salary based on career level
+-- Range Salary based on career level and experience
 WITH BASE_SALARY_CAREER_LEVEL
 AS (
 	SELECT
@@ -260,7 +260,7 @@ SELECT *
 FROM responsibilities
 
 
--- Searching responsibilitites by gig job
+-- Searching marketing executive position that possible for gig job
 SELECT
 	job_main.scrapedid,
 	job_location.location,
@@ -294,7 +294,7 @@ JOIN job_req_edu
  AND job_main.salary_max is not null;
  
  
- -- responsibilities
+ -- Searching List responsibilities and job desc for gig job
 WITH BASE_RESPONSIBILITY
 AS (
 	SELECT *
